@@ -35,7 +35,7 @@ class BooksController < ApplicationController
         if @book.update(book_params)
             redirect_to @book # redirecciona a la vista del libro actualizado
         else
-            render 'edit' # vuelve a mostrar el formulario de edición
+            render 'edit', status: :unprocessable_entity # vuelve a mostrar el formulario de edición
         end
     end
 
