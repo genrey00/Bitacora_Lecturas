@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :books
   root "books#index" # Establece la ruta raíz a la acción index del controlador Books
+  resources :books
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
