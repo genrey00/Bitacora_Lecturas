@@ -1,20 +1,10 @@
-<% if @book.errors.any? %>
-  <div>
-    <h3>Errores:</h3>
-    <ul>
-      <% @book.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
-
-<%= form_with model: @book do |f| %>
+<%= form_with model: @book, local: true do |f| %>
+  <%# Campos del formulario %>
   <div>
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
-  
+
   <div>
     <%= f.label :name_author %>
     <%= f.text_field :name_author %>
@@ -37,4 +27,16 @@
 
   <%= f.submit %>
 <% end %>
+
 <%= link_to "Volver a la lista", books_path %>
+
+<%# Mensajes de error %>
+<% if @book.errors.any? %>
+  <div id="error_explanation" style="color: red;">
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
