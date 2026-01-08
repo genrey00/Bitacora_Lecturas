@@ -1,0 +1,13 @@
+<h1><%= @book.title %></h1>
+<p>Autor: <%= @book.name_author %> <%= @book.last_name_author %></p>
+<p>Inicio: <%= format_date(@book.start_date) %></p>
+<p>Fin: <%= format_date(@book.end_date) %></p>
+
+<%= link_to "Volver a la lista", books_path %>
+<%= link_to "Editar", edit_book_path(@book) %>
+<%= link_to "Eliminar",
+            book_path(@book),
+            data: {
+              turbo_method: :delete,
+              turbo_confirm: "¿Seguro?"
+            } %>

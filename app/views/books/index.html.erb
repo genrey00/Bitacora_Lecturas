@@ -1,0 +1,19 @@
+<h1>Lista de libros</h1>
+
+<ul>
+  <% @books.each do |book| %>
+    <li>
+      <%= book.title %> - <%= author_full_name(book) %>
+      | <%= link_to "Ver", book_path(book) %>
+      | <%= link_to "Editar", edit_book_path(book) %>
+      | <%= link_to "Eliminar",
+            book_path(book),
+            data: {
+              turbo_method: :delete,
+              turbo_confirm: "¿Seguro?"
+            } %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Agregar nuevo libro", new_book_path %>
