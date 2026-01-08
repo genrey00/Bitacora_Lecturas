@@ -20,7 +20,7 @@ class BooksController < ApplicationController
         if @book.save
             redirect_to @book # redirecciona a la vista del libro recién creado
         else
-            render 'new' # vuelve a mostrar el formulario de nuevo libro
+            render 'new', status: :unprocessable_entity # vuelve a mostrar el formulario de nuevo libro y establece el estado HTTP a 422
         end
     end
     
