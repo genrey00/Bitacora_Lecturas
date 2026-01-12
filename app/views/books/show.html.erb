@@ -1,13 +1,23 @@
-<h1><%= @book.title %></h1>
+<div class="books-index">
+<h1>Detalle Libro</h1>
+</div>
+
+<div class="books-show">
+<div class="book-details">
+<h2><%= @book.title %></h2>
 <p>Autor: <%= @book.name_author %> <%= @book.last_name_author %></p>
 <p>Inicio: <%= format_date(@book.start_date) %></p>
 <p>Fin: <%= format_date(@book.end_date) %></p>
+</div>
 
-<%= link_to "Volver a la lista", books_path %>
-<%= link_to "Editar", edit_book_path(@book) %>
+<div class="book-actions">
+<%= link_to "Volver a la lista", books_path, class: "link link-back" %>
+<%= link_to "Editar", edit_book_path(@book), class: "link link-edit" %>
 <%= link_to "Eliminar",
             book_path(@book),
+            class: "link link-delete",
             data: {
               turbo_method: :delete,
               turbo_confirm: "¿Seguro?"
             } %>
+</div>

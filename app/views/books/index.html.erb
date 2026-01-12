@@ -1,18 +1,29 @@
+<div class="books-index">
 <h1>Lista de libros</h1>
+</div>
 
-<ul>
+<div class="add-book-link">
+<%= link_to "Agregar nuevo libro", new_book_path, class: "link link-primary" %>
+</div>
+
+<ul class="books-list">
   <% @books.each do |book| %>
-    <li>
+    <li class="books-item">
+      <div class="book-title">
       <%= book.title %> - <%= author_full_name(book) %>
-      | <%= link_to "Ver", book_path(book) %>
-      | <%= link_to "Editar", edit_book_path(book) %>
-      | <%= link_to "Eliminar",
+      </div>
+      <div class="books-actions">
+       <%= link_to "Ver", book_path(book), class: "link link-show" %>
+       <%= link_to "Editar", edit_book_path(book), class: "link link-edit" %>
+       <%= link_to "Eliminar",
             book_path(book),
+            class: "link link-delete",
             data: {
               turbo_method: :delete,
               turbo_confirm: "¿Seguro?"
             } %>
+      </div>
     </li>
   <% end %>
 </ul>
-<%= link_to "Agregar nuevo libro", new_book_path %>
+
