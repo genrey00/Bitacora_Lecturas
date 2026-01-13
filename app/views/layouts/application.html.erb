@@ -24,6 +24,9 @@
   </head>
 
   <body>
+    <div class="books-index">
+      <h1><%= yield(:title) || "Bitacora de Lecturas" %></h1>
+    </div>
     <%= yield %>
     <%= render "books/footer" %>
   </body>
