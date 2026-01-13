@@ -1,0 +1,84 @@
+.books-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap : 10px;
+}
+
+.link {
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add-book-link {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.link-primary {
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 20px;
+    background-color: #2980b9;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.link-primary:hover {
+    background-color: #1c5980;
+    color: #ffffff;
+}
+
+.link-show {
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 16px;
+    background-color: #2ecc71;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.link-show:hover {
+    background-color: #1e8449;
+    color: #ffffff;
+}
+
+.link-edit {
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 16px;
+    background-color: #f39c12;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.link-edit:hover {
+    background-color: #d68910;
+    color: #ffffff;
+}
+
+.link-delete {
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 16px;
+    background-color: #e74c3c;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.link-delete:hover {
+    background-color: #c0392b;
+    color: #ffffff;
+}
+
+.link-back {
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 16px;
+    background-color: #7f8c8d;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 10px;
+}
