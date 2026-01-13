@@ -10,6 +10,11 @@
       <div class="book-title">
       <%= book.title %> - <%= author_full_name(book) %>
       </div>
+
+      <div class="status-book">
+      <%= book_status_options(book) %>
+      </div>
+      
       <div class="books-actions">
        <%= link_to "Ver", book_path(book), class: "link link-show" %>
        <%= link_to "Editar", edit_book_path(book), class: "link link-edit" %>
