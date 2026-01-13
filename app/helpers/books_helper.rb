@@ -9,7 +9,13 @@ module BooksHelper
         date.present? ? date.strftime("%d/%m/%Y") : "No indicado"
     end
 
+    # Mostrar el periodo de lectura del libro
     def period_lecture(book)
         "#{format_date(book.start_date)} - #{format_date(book.end_date)}"
+    end
+
+    # Obtener el nombre del estado del libro o "Sin estado" si no tiene
+    def book_status_options(book)
+        book.status&.name || "Sin estado"
     end
 end
