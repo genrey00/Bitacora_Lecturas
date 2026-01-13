@@ -7,3 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+["Pendiente", "Leyendo", "Terminado"].each do |status_name|
+    Status.find_or_create_by!(name: status_name)
+end
