@@ -6,6 +6,10 @@ module BooksHelper
 
     # Formatear la fecha en formato dd/mm/yyyy o mostrar un guion si es nula
     def format_date(date)
-        date.present? ? date.strftime("%d/%m/%Y") : "—"
-end
+        date.present? ? date.strftime("%d/%m/%Y") : "No indicado"
+    end
+
+    def period_lecture(book)
+        "#{format_date(book.start_date)} - #{format_date(book.end_date)}"
+    end
 end
