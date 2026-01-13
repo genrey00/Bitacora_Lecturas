@@ -54,7 +54,8 @@ class BooksController < ApplicationController
             :name_author, 
             :last_name_author, 
             :start_date, 
-            :end_date
+            :end_date,
+            :status_id
         )
     end
 end
