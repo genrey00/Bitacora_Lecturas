@@ -14,6 +14,13 @@ body {
   font-size: 30px;
 }
 
+.header-books {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
 .books-list {
   list-style-type: none;
   padding: 0;
