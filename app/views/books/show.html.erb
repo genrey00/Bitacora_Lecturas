@@ -3,7 +3,7 @@
 <div class="books-show">
 <div class="book-details">
 <h2><%= @book.title %></h2>
-<p><strong>Autor:</strong> <%= author_full_name(@book) %></p>
+<p><strong>Autor:</strong> <%= @book.author_full_name %></p>
 <p><strong>Periodo Lectura:</strong> <%= period_lecture(@book) %></p>
 <p><strong>Estado:</strong> <%= book_status_label(@book) %></p>
 </div>
