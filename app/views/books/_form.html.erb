@@ -33,7 +33,9 @@
 
  <div class="form-row full-width">
     <%= f.label :status_id, "Estado" %>
-    <%= f.collection_select :status_id, Status.all, :id, :name, prompt: "Selecciona un estado" %>
+    <%= f.collection_select :status_id, Status.all, :id, :name, 
+    { prompt: "Selecciona un estado" }, 
+    { class: "status_lecture" } %>
   </div>
 
   <%= f.submit class: "submit-button" %>

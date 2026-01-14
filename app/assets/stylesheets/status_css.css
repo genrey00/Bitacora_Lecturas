@@ -1,0 +1,39 @@
+.status_lecture {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+
+.status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 14px;}
+
+.status-pendiente {
+    background-color: rgb(164, 164, 63);
+    color: white;
+}
+
+.status-leyendo {
+    background-color: #2196f3; /* Azul */
+    color: white;
+}
+
+.status-terminado {
+    background-color: #4caf50; /* Verde */
+    color: white;
+}
+
+.status-sin-estado {
+    background-color: #9e9e9e; /* Gris */
+    color: white;
+}
+
+.status-book {
+    margin-right: 15px;
+}

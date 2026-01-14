@@ -18,4 +18,17 @@ module BooksHelper
     def book_status_options(book)
         book.status&.name || "Sin estado"
     end
+
+    def book_status_label(book)
+        case book.status&.name
+        when "Pendiente"
+            content_tag(:span, "Pendiente", class: "status status-pendiente")
+        when "Leyendo"
+            content_tag(:span, "Leyendo", class: "status status-leyendo")
+        when "Terminado"
+            content_tag(:span, "Terminado", class: "status status-terminado")
+        else
+            content_tag(:span, "Sin estado", class: "status status-sin-estado")
+        end
+    end
 end
