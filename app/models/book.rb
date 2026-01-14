@@ -21,6 +21,9 @@ class Book < ApplicationRecord
         end
     end
 
+    # Scope para filtrar libros por estado
+    scope :por_status, ->(status_id) { where(status_id: status_id) if status_id.present? }
+
     # relaciones con otros modelos
     belongs_to :status, optional: true
 end
