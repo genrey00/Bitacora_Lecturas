@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
-    # Función para listar todos los libros
+    # Función para listar todos los libros o filtrar por estado
     def index
-        @books = Book.all
+        @books = Book.por_status(params[:status_id]) || Book.all
     end
 
     # Función para mostrar un libro específico
