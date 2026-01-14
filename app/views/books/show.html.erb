@@ -5,7 +5,7 @@
 <h2><%= @book.title %></h2>
 <p><strong>Autor:</strong> <%= author_full_name(@book) %></p>
 <p><strong>Periodo Lectura:</strong> <%= period_lecture(@book) %></p>
-<p><strong>Estado:</strong> <%= book_status_options(@book) %></p>
+<p><strong>Estado:</strong> <%= book_status_label(@book) %></p>
 </div>
 
 <div class="book-actions">
