@@ -36,7 +36,7 @@ class Book < ApplicationRecord
 
     def titulo_unico
         # Verifica que el título del libro sea único
-        if Book.exists?(title: title)
+        if Book.where(title: title).where.not(id: id).exists?
             errors.add(:base, "El título del libro ya existe")
         end
     end
