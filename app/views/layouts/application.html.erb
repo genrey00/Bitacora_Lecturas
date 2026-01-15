@@ -27,7 +27,21 @@
     <div class="books-index">
       <h1><%= yield(:title) || "Bitacora de Lecturas" %></h1>
     </div>
+
     <%= yield %>
+
+    <% if flash[:notice] %>
+      <script>
+        alert("<%= j flash[:notice] %>");
+      </script>
+    <% end %>
+
+    <% if flash[:alert] %>
+      <script>
+        alert("<%= j flash[:alert] %>");
+      </script>
+    <% end %>
+
     <%= render "books/footer" %>
   </body>
 </html>
