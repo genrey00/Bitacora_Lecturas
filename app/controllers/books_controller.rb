@@ -42,8 +42,11 @@ class BooksController < ApplicationController
     # Función para eliminar un libro
     def destroy
         @book = Book.find(params[:id])
-        @book.destroy
-        redirect_to books_path
+        if @book.destroy
+            redirect_to books_path, notice: "Libro eliminado exitosamente."
+        else
+        redirect_to books_path, alert: @book.errors.full_messages.to_sentence
+        end
     end
 
     # book_params es un método privado para permitir solo los parámetros permitidos

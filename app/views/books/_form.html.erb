@@ -3,30 +3,30 @@
 <%= form_with model: @book, local: true do |f| %>
   <%# Campos del formulario %>
   <div class="form-row full-width">
-    <%= f.label :book_title %>
+    <%= f.label :title, "Título del libro" %>
     <%= f.text_field :title %>
   </div>
 
   <div class="form-row">
     <div class="form-group">
-    <%= f.label :name_author %>
+    <%= f.label :name_author, "Nombre del autor" %>
     <%= f.text_field :name_author %>
    </div>
 
   <div class="form-group">
-    <%= f.label :last_name_author %>
+    <%= f.label :last_name_author, "Apellido del autor" %>
     <%= f.text_field :last_name_author %>
   </div>
   </div>
 
   <div class="form-row">
   <div class="form-group">
-    <%= f.label :start_date %>
+    <%= f.label :start_date, "Fecha de inicio" %>
     <%= f.date_field :start_date %>
   </div>
 
   <div class="form-group">
-    <%= f.label :end_date %>
+    <%= f.label :end_date, "Fecha de finalización" %>
     <%= f.date_field :end_date %>
   </div>
 </div>
@@ -38,11 +38,11 @@
     { class: "status_lecture" } %>
   </div>
 
-  <%= f.submit class: "submit-button" %>
+  <%= f.submit "Guardar libro", class: "submit-button" %>
 <% end %>
 </div>
 
-<%= link_to "Volver a la lista", books_path %>
+<%= button_to "Volver a la lista", books_path, method: :get, class: "link link-back" %>
 
 <%# Mensajes de error %>
 <% if @book.errors.any? %>
